@@ -1,0 +1,262 @@
+/* ================================
+   KGL Login Page Styles
+   ================================ */
+
+/* Root Variables - Brand Colors */
+:root {
+  --brand-primary: #ffbd39;
+  --brand-secondary: #1b2631;
+  --brand-primary-hover: #ffc95c;
+  --brand-primary-active: #e6aa32;
+  --text-dark: #181610;
+  --text-muted: #8d7d5e;
+  --text-light: #ffffff;
+  --border-color: #e7e2da;
+  --bg-light: #f8f7f5;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Body Styling */
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+/* Login Container */
+.login-container {
+  padding: 1rem;
+}
+
+/* Login Card */
+.login-card {
+  max-width: 440px;
+  margin: 0 auto;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid var(--border-color) !important;
+}
+
+/* Card Header with Background Image */
+.card-header-image {
+  height: 128px;
+  background-image: url('../assets/header-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  border: none;
+  padding: 0;
+}
+
+/* Header Overlay */
+.header-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+/* Logo Container */
+.logo-container {
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+/* Logo Circle */
+.logo-circle {
+  width: 64px;
+  height: 64px;
+  background-color: var(--text-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  border: 2px solid var(--brand-primary);
+}
+
+/* Logo Icon/Image */
+.logo-icon {
+  color: var(--brand-primary);
+  font-size: 32px;
+}
+
+.logo-image {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+/* Card Body */
+.card-body {
+  padding-top: 3rem !important;
+}
+
+/* Card Title */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: -0.025em;
+  margin-bottom: 0.5rem;
+}
+
+/* Card Subtitle */
+.card-subtitle {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  max-width: 80%;
+  margin: 0 auto 2rem;
+}
+
+/* Form Labels */
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+/* Form Controls */
+.form-control,
+.form-select {
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: 'Noto Sans', sans-serif;
+  background-color: var(--text-light);
+  color: var(--text-dark);
+  transition: all 0.2s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 0.25rem rgba(255, 189, 57, 0.25);
+  outline: 0;
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+}
+
+/* Password Input Group */
+.input-group {
+  position: relative;
+}
+
+.password-input {
+  padding-right: 3rem;
+}
+
+/* Toggle Password Button */
+.toggle-password {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 1px solid var(--border-color);
+  border-left: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background-color: transparent;
+  color: var(--text-muted);
+  padding: 0 1rem;
+  z-index: 5;
+  transition: all 0.2s ease;
+}
+
+.toggle-password:hover {
+  color: var(--brand-primary);
+  background-color: transparent;
+}
+
+.toggle-password:focus {
+  box-shadow: none;
+}
+
+.toggle-password .material-symbols-outlined {
+  font-size: 20px;
+}
+
+/* Select Dropdown */
+.form-select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238d7d5e'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 24px;
+  padding-right: 3rem;
+}
+
+/* Login Button */
+.btn-login {
+  background-color: var(--brand-primary);
+  border: none;
+  color: var(--text-dark);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.btn-login:hover {
+  background-color: var(--brand-primary-hover);
+  color: var(--text-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 189, 57, 0.3);
+}
+
+.btn-login:active {
+  background-color: var(--brand-primary-active);
+  transform: translateY(0);
+}
+
+.btn-login:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 189, 57, 0.5);
+}
+
+/* Forgot Password Link */
+.forgot-password-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #475569;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.forgot-password-link:hover {
+  color: var(--brand-primary);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  .card-subtitle {
+    font-size: 0.8125rem;
+    max-width: 90%;
+  }
+
+  .card-body {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
+
+/* Material Icons Fix */
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
